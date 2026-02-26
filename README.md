@@ -1,4 +1,4 @@
-# Hu553in Tap
+# hu553in Tap
 
 ## How do I install these formulae?
 

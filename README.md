@@ -1,18 +1,12 @@
 # hu553in Tap
 
-## How do I install these formulae?
+## How to use
 
-`brew install hu553in/tap/<formula>`
-
-Or `brew tap hu553in/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
+- `brew install hu553in/tap/<formula>`
+- `brew tap hu553in/tap` -> `brew install <formula>`
+- `Brewfile`:
 
 ```ruby
 tap "hu553in/tap"
 brew "<formula>"
 ```
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).

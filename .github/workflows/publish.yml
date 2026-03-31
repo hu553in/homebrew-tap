@@ -16,27 +16,18 @@ jobs:
       issues: read
       pull-requests: write
     steps:
-      - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@main
+      - uses: Homebrew/actions/setup-homebrew@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up git
-        uses: Homebrew/actions/git-user-config@main
-
-      - name: Pull bottles
+      - uses: Homebrew/actions/git-user-config@main
+      - run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
-        run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
-
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@main
+      - uses: Homebrew/actions/git-try-push@main
         with:
           branch: main
-
-      - name: Delete branch
-        if: github.event.pull_request.head.repo.fork == false
+      - if: github.event.pull_request.head.repo.fork == false
+        run: git push --delete origin "$BRANCH"
         env:
           BRANCH: ${{ github.event.pull_request.head.ref }}
-        run: git push --delete origin "$BRANCH"

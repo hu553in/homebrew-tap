@@ -1,9 +1,11 @@
 # hu553in Tap
 
+Homebrew Tap for publishing personal formulae and casks.
+
 ## How to use
 
 - `brew install hu553in/tap/<formula>`
-- `brew tap hu553in/tap` -> `brew install <formula>`
+- `brew tap hu553in/tap`, then `brew install <formula>`
 - `Brewfile`:
 
 ```ruby

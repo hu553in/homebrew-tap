@@ -2,7 +2,7 @@
 
 Homebrew Tap for publishing personal formulae and casks.
 
-## How to use
+## Usage
 
 - `brew install hu553in/tap/<formula>`
 - `brew tap hu553in/tap`, then `brew install <formula>`

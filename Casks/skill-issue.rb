@@ -1,6 +1,6 @@
 cask "skill-issue" do
-  version "0.1.0"
-  sha256 "999bc6cd801634e0aa8ea364fe5f975cbfce8e41fd453d9cc1a0191f66fcbd0b"
+  version "0.1.1"
+  sha256 "692e815d3d3c0903a48553d5a0c5b3bb790ce9aa7e49ac5ee780e6db6b1c0612"
 
   url "https://github.com/hu553in/skill-issue/releases/download/v#{version}/Skill-Issue-macos-arm64.zip"
   name "Skill Issue"

@@ -1,18 +1,22 @@
 # hu553in Tap
 
-## How do I install these formulae and casks?
+## Install Skill Issue
 
-`brew install hu553in/tap/<formula>` or `brew install --cask hu553in/tap/<cask>`.
+Skill Issue requires an Apple silicon Mac running macOS Tahoe 26 or later.
 
-Or `brew tap hu553in/tap` and then `brew install <formula>` or `brew install --cask <cask>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "hu553in/tap"
-brew "<formula>"
-cask "<cask>"
+```sh
+brew install --cask hu553in/tap/skill-issue
 ```
+
+## Development
+
+Install Bun, then enable the cask syntax check and Commitlint once per clone.
+
+```sh
+bunx lefthook install
+```
+
+On automated bump pull requests, select **Approve workflows to run** to start the cask audit.
 
 ## Documentation
 
